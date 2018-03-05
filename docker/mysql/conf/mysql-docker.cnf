@@ -58,3 +58,13 @@ long_query_time     = 1
 max_connections    = 20
 max_allowed_packet = 16M
 
+#################################################
+## Bitrix
+##
+
+sql_mode=""
+# default-time-zone = "Europe/Moscow"
+innodb_flush_log_at_trx_commit=2
+innodb_flush_method=O_DIRECT
+transaction-isolation=READ-COMMITTED
+
