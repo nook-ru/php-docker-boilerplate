@@ -2,5 +2,5 @@
 .idea
 nbproject
 /backup/*
-/app/*
+#/app/*
 /docker-compose.yml
