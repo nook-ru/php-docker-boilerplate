@@ -1,0 +1,68 @@
+# removed staged and then added to .gitignore
+# git rm --cached `git ls-files -i --exclude-standard`
+
+# aptana project file
+/.project
+/.idea
+
+/.htaccess
+
+# SEO
+/robots.txt
+/sitemap*.xml
+
+/*.log
+/*.tar.gz
+
+# bitrix core
+/bitrix/*.php
+/bitrix/gadgets/
+/bitrix/p3p.xml
+/bitrix/web.config
+
+/bitrix/admin/*
+!/bitrix/admin/citrus*
+/bitrix/services/
+/bitrix/modules/*
+!/bitrix/modules/citrus.*
+!/bitrix/modules/vdgb.*
+/bitrix/components/bitrix
+/bitrix/gadgets/bitrix
+/bitrix/activities/bitrix
+/bitrix/wizards/bitrix
+/bitrix/themes
+/bitrix/fonts
+/bitrix/images
+/bitrix/js
+/bitrix/css
+/bitrix/panel
+/bitrix/tools
+/bitrix/license_key.php
+
+# DB login and password
+/bitrix/.settings.php
+
+/bitrix/php_interface/dbconn.php
+
+# backups folder
+/bitrix/backup
+
+# cache and temp files
+/bitrix/*cache
+/bitrix/html_pages
+/bitrix/tmp
+/bitrix/managed_flags
+/bitrix/site_checker*
+/bitrix/updates
+
+# OTP
+/bitrix/otp
+# statistics modules
+/bitrix/template
+# resources files
+/bitrix/sounds
+/bitrix/image_uploader
+/upload
+/web.config
+
+/bitrix/templates/.default

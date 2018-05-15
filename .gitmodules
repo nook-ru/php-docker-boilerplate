@@ -1,0 +1,9 @@
+[submodule "helpers"]
+	path = helpers
+	url = http://marat@bitbucket.docker.citrus-dev.ru/scm/~marat/helpers.git
+[submodule "app/bitrix/modules/citrus.arealty"]
+	path = app/bitrix/modules/citrus.arealty
+	url = http://marat@bitbucket.docker.citrus-dev.ru/scm/citrus-sol/citrus.arealty.git
+[submodule "app/bitrix/modules/citrus.arealtypro"]
+	path = app/bitrix/modules/citrus.arealtypro
+	url = http://marat@bitbucket.docker.citrus-dev.ru/scm/citrus-sol/citrus.arealtypro.git
