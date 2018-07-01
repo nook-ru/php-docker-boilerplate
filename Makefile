@@ -35,6 +35,16 @@ rebuild:
 	docker-compose up -d --force-recreate
 
 #############################
+# Files
+#############################
+
+files-backup:
+	bash ./bin/backup-files.sh
+
+files-restore:
+	bash ./bin/restore-files.sh
+
+#############################
 # MySQL
 #############################
 
@@ -58,8 +68,8 @@ solr-restore:
 # General
 #############################
 
-backup:  mysql-backup  solr-backup
-restore: mysql-restore solr-restore
+backup:  mysql-backup  solr-backup	files-backup
+restore: mysql-restore solr-restore files-restore
 
 build:
 	bash bin/build.sh
