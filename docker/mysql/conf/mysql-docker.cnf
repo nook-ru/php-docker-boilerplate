@@ -63,7 +63,7 @@ max_allowed_packet = 16M
 ##
 
 sql_mode=""
-# default-time-zone = "Europe/Moscow"
+default-time-zone = "Europe/Moscow"
 innodb_flush_log_at_trx_commit=2
 innodb_flush_method=O_DIRECT
 transaction-isolation=READ-COMMITTED
