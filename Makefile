@@ -13,6 +13,7 @@ create:
 
 bx-restore:
 	bash bin/bx-restore.sh $(ARGS)
+	restart
 
 #############################
 # Docker machine states
@@ -30,6 +31,8 @@ start:
 
 stop:
 	docker-compose stop
+
+restart: stop start
 
 state:
 	docker-compose ps
