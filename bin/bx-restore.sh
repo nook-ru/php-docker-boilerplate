@@ -155,7 +155,7 @@ function extractFiles() {
   logMsg "Extracting…"
 
   if [ $(isValidUrl "${backupUrl}") = true ]; then
-    cat "${BACKUP_DIR}/${backupName}*" | tar xz -C "$CODE_DIR"
+    cat "${BACKUP_DIR}/${backupName}"* | tar xz -C "$CODE_DIR"
   else
     cat ${backupUrl}* | tar xz -C "$CODE_DIR"
   fi
