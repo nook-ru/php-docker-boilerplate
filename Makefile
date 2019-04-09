@@ -21,6 +21,9 @@ bx-restore:
 up:
 	docker-compose up -d
 
+down:
+	docker-compose down -v
+
 start:
 	docker-compose start
 
