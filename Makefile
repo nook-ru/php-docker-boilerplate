@@ -11,6 +11,9 @@ list:
 create:
 	bash bin/create-project.sh $(ARGS)
 
+bx-restore:
+	bash bin/bx-restore.sh $(ARGS)
+
 #############################
 # Docker machine states
 #############################

@@ -1,3 +1,0 @@
-[submodule "helpers"]
-	path = helpers
-	url = ssh://git@bitbucket.citrus-dev.ru:7999/~marat/helpers.git
