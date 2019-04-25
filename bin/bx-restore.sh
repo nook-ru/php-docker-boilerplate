@@ -25,7 +25,6 @@ backupName=$(basename ${backupUrl})
 
 mkdir -p -- "${BACKUP_DIR}"
 
-# имя БД создается из имени папки сайта, все символы кроме латинских букв и цифр заменяются на знак подчеркивания. последний сегмент заменяется на `_db`
 databaseHost="mysql"
 databaseName="database"
 databaseUser="dev"
@@ -135,10 +134,12 @@ function downloadBackup() {
         currentUrl+=".${counter}"
       fi
 
+      set +o errexit
       validUrl=$(isValidUrl "${currentUrl}")
       if [ "${validUrl}" = true ]; then
-        wget -nv "${currentUrl}" -P "${BACKUP_DIR}"
+        wget "${currentUrl}" -P "${BACKUP_DIR}"
       fi
+      set -o errexit
 
       let counter=counter+1
     done
