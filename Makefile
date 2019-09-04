@@ -41,7 +41,7 @@ rebuild:
 	docker-compose stop
 	docker-compose pull
 	docker-compose rm --force app
-	docker-compose build --no-cache --pull
+	docker-compose build --no-cache
 	docker-compose up -d --force-recreate
 
 #############################
