@@ -1,1 +1,3 @@
 # m h  dom mon dow  user  command
+
+* * * * * application if [ -f /app/bitrix/php_interface/cron_events.php ]; then /usr/local/bin/php -f /app/bitrix/php_interface/cron_events.php; else /usr/local/bin/php -f /app/bitrix/modules/main/tools/cron_events.php; fi

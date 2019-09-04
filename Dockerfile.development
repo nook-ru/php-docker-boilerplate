@@ -61,7 +61,5 @@ RUN ln -sf /opt/docker/etc/cron/crontab /etc/cron.d/docker-boilerplate \
     && echo >> /opt/docker/etc/cron/crontab \
     && ln -sf /opt/docker/etc/php/development.ini /opt/docker/etc/php/php.ini
 
-# RUN docker-cronjob '* * * * * application if [ -f /app/bitrix/php_interface/cron_events.php ]; then php -f /app/bitrix/php_interface/cron_events.php; else php -f /app/bitrix/modules/main/tools/cron_events.php; fi`
-
 # Configure volume/workdir
 WORKDIR /app/
