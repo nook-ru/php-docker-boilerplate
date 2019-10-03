@@ -1,0 +1,4 @@
+[submodule "app"]
+	path = app
+	url = ssh://git@bitbucket.citrus-dev.ru:7999/~marat/docker-boilerplate-app.git
+	branch = master
