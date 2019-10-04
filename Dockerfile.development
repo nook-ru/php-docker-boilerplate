@@ -61,5 +61,10 @@ RUN ln -sf /opt/docker/etc/cron/crontab /etc/cron.d/docker-boilerplate \
     && echo >> /opt/docker/etc/cron/crontab \
     && ln -sf /opt/docker/etc/php/development.ini /opt/docker/etc/php/php.ini
 
+RUN go-replace --mode=lineinfile --lineinfile-before='}' --regex \
+    -s 'fastcgi_param SERVER_NAME' \
+    -r 'fastcgi_param SERVER_NAME $host;' \
+    -- /opt/docker/etc/nginx/vhost.common.d/10-php.conf
+
 # Configure volume/workdir
 WORKDIR /app/
