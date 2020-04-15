@@ -23,6 +23,8 @@ services:
     volumes:
       - ./app/:/app/
       - ./:/docker/
+    # fix loopback dns problems with dory  
+    dns: 8.8.8.8
     # cap and privileged needed for slowlog
     cap_add:
       - SYS_PTRACE
