@@ -29,7 +29,7 @@ This boilerplate can also be used for any other web project. Just customize the 
 If you have any success stories please contact me.
 
 You can use my [Vagrant Development VM](https://github.com/mblaschke/vagrant-development) for this Docker boilerplate, e.g. for easily creating new boilerplate installations with short shell command: `ct docker:create directory`.
-
+    
 ## Table of contents
 
 - [First steps / Installation and requirements](/documentation/INSTALL.md)
@@ -41,6 +41,17 @@ You can use my [Vagrant Development VM](https://github.com/mblaschke/vagrant-dev
 - [Container detail info](/documentation/DOCKER-INFO.md)
 - [Troubleshooting](/documentation/TROUBLESHOOTING.md)
 - [Changelog](/CHANGELOG.md)
+
+
+## TODO
+
+-   [ ] в логах и php отображается [IP сервера](https://nginx.org/ru/docs/http/ngx_http_realip_module.html)  
+    real_ip_recursive on;
+    set_real_ip_from 172.27.0.4;
+-   [ ] Проблемы с dns внутри контейнеров  
+    -   [ ] Работает с `dnsmasq`: добавить `RUN docker-service enable dnsmasq` в `Dockerfile.development`
+    -   [ ] Использовать https://www.digitalocean.com/community/tutorials/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-ubuntu-18-04
+
 
 ## Credits
 
