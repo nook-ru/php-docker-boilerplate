@@ -1,6 +1,32 @@
 [mysqld]
 
 #################################################
+## Trying to lower memory usage
+
+performance_schema = 0
+skip-host-cache
+skip-name-resolve
+
+skip-external-locking
+connect_timeout     = 5
+wait_timeout        = 600
+sort_buffer_size    = 4M
+
+bulk_insert_buffer_size = 16M
+
+myisam_recover_options = BACKUP
+
+table_open_cache        = 400
+myisam_sort_buffer_size = 512M
+
+concurrent_insert    = 2
+read_buffer_size     = 2M
+read_rnd_buffer_size = 1M
+
+expire_logs_days    = 10
+max_binlog_size     = 100M
+
+#################################################
 ## Charset
 
 character-set-server=utf8
@@ -9,14 +35,13 @@ collation-server=utf8_general_ci
 #################################################
 ## Buffers
 
-key_buffer_size                 = 200M
-query_cache_size                = 100M
+key_buffer_size                 = 128M
 
-innodb_buffer_pool_size         = 250M
+innodb_buffer_pool_size         = 128M
 innodb_log_buffer_size          = 10M
 
-tmp_table_size      = 200M
-max_heap_table_size = 200M
+tmp_table_size      = 64M
+max_heap_table_size = 64M
 
 open-files-limit  = 2048
 thread_cache_size = 12
@@ -37,7 +62,7 @@ transaction-isolation=REPEATABLE-READ
 ## Query cache
 
 query_cache_limit = 256k
-query_cache_size  = 60M
+query_cache_size  = 32M
 query_cache_type  = 1
 
 #################################################
