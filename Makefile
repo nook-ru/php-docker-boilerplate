@@ -92,6 +92,14 @@ shell:
 root:
 	docker-compose exec --user root app /bin/bash
 
+prod:
+	rm -f docker-compose.yml
+	ln -s ./docker-compose.production.yml docker-compose.yml
+
+dev:
+	rm -f docker-compose.yml
+	ln -s ./docker-compose.development-reverse-proxy.yml docker-compose.yml
+
 #############################
 # Argument fix workaround
 #############################
