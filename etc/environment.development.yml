@@ -9,7 +9,29 @@
 #######################################
 # PHP Debugger (xdebug|blackfire|none)
 
-PHP_DEBUGGER=xdebug
+PHP_DEBUGGER=xdebug # none, xdebug, blackfire
+
+#XDEBUG_MODE=develop,debug,trace
+#XDEBUG_PROFILER_ENABLE=1
+#XDEBUG_OUTPUT_DIR=/app/xdebug
+php.xdebug.trace-output-name=trace-%R-%u
+XDEBUG_TRACE_OUTPUT_NAME=trace-%R-%u
+
+#####################
+# Debug console apps
+#####################
+
+#XDEBUG_REMOTE_AUTOSTART=1
+#XDEBUG_REMOTE_CONNECT_BACK=0
+#XDEBUG_DISCOVER_CLIENT_HOST=0
+
+# run make x and update this ip
+XDEBUG_CLIENT_HOST=172.27.0.1
+
+######################
+# /Debug console apps
+######################
+
 PHP_DATE_TIMEZONE=Europe/Moscow
 
 #######################################

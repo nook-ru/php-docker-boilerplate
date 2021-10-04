@@ -15,6 +15,9 @@ bx-restore:
 	bash bin/bx-restore.sh $(ARGS)
 	restart
 
+x:
+	bash bin/xdebug-client-host.sh
+
 #############################
 # Docker machine states
 #############################
